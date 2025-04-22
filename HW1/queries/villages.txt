@@ -1,0 +1,3 @@
+triple(Village,"rdf:type","yago:Village_In_Estonia_Q51049922") &
+triple(Village,Characteristic,Value) =>
+$ans("Village:",Village,"has characteristic",Characteristic,"with value",Value). 

@@ -1,0 +1,37 @@
+# Define historical buildings
+-triple(Building,"rdf:type","yago:Medieval_Castle") |
+-triple(Building,"rdf:type","yago:Baroque_Palace") |
+-triple(Building,"rdf:type","yago:Medieval_Church") |
+-triple(Building,"rdf:type","yago:Manor_House") =>
+historical_building(Building).
+
+# Get building details
+-historical_building(Building) &
+-triple(Building,"schema:location",Location) &
+-triple(Building,"yago:constructionDate",Date) =>
+building_info(Building,Location,Date).
+
+# Find buildings housing museums or collections
+-historical_building(Building) &
+-triple(Building,"yago:houses",Collection) =>
+cultural_venue(Building,Collection).
+
+# Find medieval buildings (before 1500)
+-building_info(Building,Location,Date) &
+Date < 1500 =>
+medieval_building(Building,Location,Date).
+
+# Find buildings with specific architectural styles
+-historical_building(Building) &
+-triple(Building,"yago:architecturalStyle",Style) =>
+architectural_heritage(Building,Style).
+
+# Output answers
+medieval_building(X,Y,Z) =>
+$ans("Medieval building:",X,"in",Y,"from",Z).
+
+cultural_venue(X,Y) =>
+$ans("Historical building",X,"houses",Y).
+
+architectural_heritage(X,Y) =>
+$ans("Building",X,"features",Y,"architecture"). 

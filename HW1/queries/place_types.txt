@@ -1,0 +1,3 @@
+triple(Place,"schema:location","yago:Estonia") &
+triple(Place,"rdf:type",Type) =>
+$ans("Place type found:",Type). 

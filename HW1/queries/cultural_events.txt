@@ -1,0 +1,4 @@
+triple(X,"rdf:type","yago:Cultural_Festival") => $ans("Cultural festival:",X).
+triple(X,"rdf:type","yago:Music_Festival") => $ans("Music festival:",X).
+triple(X,"rdf:type","yago:UNESCO_Intangible_Heritage") => $ans("UNESCO heritage:",X).
+triple(X,"yago:annualVisitors",V) & V = "25000" => $ans("Popular event:",X,"with visitors:",V).

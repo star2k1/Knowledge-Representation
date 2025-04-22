@@ -1,0 +1,4 @@
+triple(Site,"rdf:type","yago:Historical_Site") &
+triple(Site,"schema:location","yago:Estonia") &
+triple(Site,Characteristic,Value) =>
+$ans("Historical site:",Site,"has characteristic",Characteristic,"with value",Value).

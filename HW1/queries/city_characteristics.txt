@@ -1,0 +1,35 @@
+% Rules for city characteristics
+
+% Find cities that are both university towns and historical
+triple(City,"rdf:type","yago:College_town") &
+triple(City,"rdf:type","yago:Lists_of_former_Hansa_cities") =>
+educational_historical_city(City).
+
+% Find cities with specific population characteristics
+triple(City,"schema:location","yago:Estonia") &
+triple(City,"rdf:type","yago:Second_Largest_City_Q50330360") =>
+major_estonian_city(City).
+
+% Find cities that are cultural centers
+triple(City,"schema:location","yago:Estonia") &
+(triple(City,"rdf:type","yago:College_town") |
+ triple(City,"rdf:type","yago:Lists_of_former_Hansa_cities")) =>
+cultural_center(City).
+
+% Find cities with educational institutions
+triple(City,"schema:location","yago:Estonia") &
+triple(City,"rdf:type","yago:College_town") =>
+educational_center(City).
+
+% Queries
+educational_historical_city(City) =>
+$ans("City with both university and historical significance:",City).
+
+major_estonian_city(City) =>
+$ans("Major city in Estonia:",City).
+
+cultural_center(City) =>
+$ans("Cultural center in Estonia:",City).
+
+educational_center(City) =>
+$ans("Educational center in Estonia:",City). 

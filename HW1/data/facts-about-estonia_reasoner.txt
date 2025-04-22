@@ -1,0 +1,4 @@
+triple("yago:Estonia","rdf:type","yago:Unitary_state").
+triple("yago:Estonia","rdf:type","yago:Oecd_Country_Q113489728").
+triple("yago:Estonia","rdf:type","yago:Language-State_Q116843339").
+triple("yago:Estonia","rdf:type","yago:Country_Bordering_The_Baltic_Sea_Q63791824").

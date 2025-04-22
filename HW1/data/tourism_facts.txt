@@ -1,0 +1,47 @@
+# Additional tourism facts about Estonia
+triple("yago:Old_Town_Tallinn", "rdf:type", "yago:UNESCO_World_Heritage_Site").
+triple("yago:Old_Town_Tallinn", "schema:description", "Medieval old town with preserved city walls and towers").
+triple("yago:Old_Town_Tallinn", "schema:location", "yago:Tallinn").
+
+# Tourist attractions
+triple("yago:Estonian_Open_Air_Museum", "rdf:type", "yago:Museum").
+triple("yago:Estonian_Open_Air_Museum", "schema:location", "yago:Tallinn").
+triple("yago:Estonian_Open_Air_Museum", "schema:description", "Historic village showcasing Estonian rural architecture").
+
+triple("yago:Lahemaa_National_Park", "rdf:type", "yago:National_Park").
+triple("yago:Lahemaa_National_Park", "schema:description", "Largest national park featuring coastal landscapes and manor houses").
+triple("yago:Lahemaa_National_Park", "schema:containedInPlace", "yago:Estonia").
+
+# Historical sites
+triple("yago:Toompea_Castle", "rdf:type", "yago:Castle").
+triple("yago:Toompea_Castle", "schema:location", "yago:Tallinn").
+triple("yago:Toompea_Castle", "schema:description", "Historic castle housing Estonian Parliament").
+
+# Cultural venues
+triple("yago:Estonian_National_Museum", "rdf:type", "yago:Museum").
+triple("yago:Estonian_National_Museum", "schema:location", "yago:Tartu").
+triple("yago:Estonian_National_Museum", "schema:description", "Modern museum showcasing Estonian cultural heritage").
+
+# Natural attractions
+triple("yago:Saaremaa_Island", "rdf:type", "yago:Island").
+triple("yago:Saaremaa_Island", "schema:containedInPlace", "yago:Estonia").
+triple("yago:Saaremaa_Island", "schema:description", "Largest Estonian island known for windmills and spas").
+
+# Distance relationships
+triple("yago:Tallinn", "yago:distanceTo", "yago:Tartu").
+triple("yago:Tallinn_Tartu_Distance", "yago:hasValue", "185").
+triple("yago:Tallinn_Tartu_Distance", "yago:hasUnit", "kilometer").
+
+# Accessibility relationships
+triple("yago:Tallinn", "yago:hasTransportation", "yago:Train").
+triple("yago:Tallinn", "yago:hasTransportation", "yago:Bus").
+triple("yago:Tallinn", "yago:hasTransportation", "yago:Airport").
+
+# Opening hours (simplified)
+triple("yago:Estonian_National_Museum", "yago:openingDays", "Tuesday-Sunday").
+triple("yago:Estonian_Open_Air_Museum", "yago:openingDays", "All_Week").
+
+# Tourist facilities
+triple("yago:Old_Town_Tallinn", "yago:hasFacility", "yago:Tourist_Information").
+triple("yago:Old_Town_Tallinn", "yago:hasFacility", "yago:Public_Restroom").
+triple("yago:Old_Town_Tallinn", "yago:hasFacility", "yago:Souvenir_Shop"). 

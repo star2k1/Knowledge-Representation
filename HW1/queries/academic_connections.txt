@@ -1,0 +1,4 @@
+triple(City,"rdf:type","yago:College_town") &
+triple(Person,"schema:birthPlace",City) &
+(triple(Person,"rdf:type","yago:Writer") | triple(Person,"rdf:type","yago:Professor")) =>
+$ans("Academic city connection:",City,"produced",Person). 

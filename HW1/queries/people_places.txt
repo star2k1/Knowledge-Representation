@@ -1,0 +1,52 @@
+% Rules for inference
+
+% Rule to find people born in cities of specific types
+triple(Person,"schema:birthPlace",City) &
+triple(City,"rdf:type",CityType) =>
+born_in_city_type(Person,City,CityType).
+
+% Rule to find artists (painters, musicians, etc.) from the same city
+triple(P1,"schema:birthPlace",City) &
+triple(P2,"schema:birthPlace",City) &
+triple(P1,"rdf:type","yago:Painter") &
+triple(P2,"rdf:type","yago:Painter") &
+P1 != P2 =>
+painters_from_same_city(P1,P2,City).
+
+% Rule to find historical cities with cultural significance
+triple(City,"schema:location","yago:Estonia") &
+triple(City,"rdf:type","yago:Lists_of_former_Hansa_cities") =>
+historical_city(City).
+
+% Rule to find people born in university cities
+triple(Person,"schema:birthPlace",City) &
+triple(City,"rdf:type","yago:College_town") =>
+born_in_university_city(Person,City).
+
+% Rule to find cities with multiple types
+triple(City,"rdf:type",Type1) &
+triple(City,"rdf:type",Type2) &
+Type1 != Type2 =>
+multi_type_city(City,Type1,Type2).
+
+% Rule to find politicians born in historical cities
+triple(Person,"schema:birthPlace",City) &
+triple(Person,"rdf:type","yago:Politician") &
+historical_city(City) =>
+politician_from_historical_city(Person,City).
+
+% Queries
+historical_city(City) =>
+$ans("Historical Hanseatic city in Estonia:",City).
+
+painters_from_same_city(P1,P2,City) =>
+$ans("Painters from same city:",P1,"and",P2,"from",City).
+
+born_in_university_city(Person,City) =>
+$ans("Person born in university city:",Person,"in",City).
+
+multi_type_city(City,T1,T2) =>
+$ans("City with multiple characteristics:",City,"types:",T1,"and",T2).
+
+politician_from_historical_city(Person,City) =>
+$ans("Politician from historical city:",Person,"from",City). 
