@@ -1,4 +1,4 @@
-% Complex rules for finding cultural and historical connections
+% Rules for finding cultural and historical connections
 
 % Rule to establish cultural significance of a city
 triple(City,"rdf:type","yago:College_town") |
@@ -11,7 +11,7 @@ triple(Person,"rdf:type","yago:Musician") |
 triple(Person,"rdf:type","yago:Writer") =>
 is_artist(Person).
 
-% Rule to find intellectuals (professors, scientists, etc.)
+% Rule to find intellectuals (professors, scientists)
 triple(Person,"rdf:type","yago:Professor") |
 triple(Person,"rdf:type","yago:Scientist") =>
 is_intellectual(Person).
@@ -75,23 +75,24 @@ Inst1 != Inst2 =>
 cultural_institution_hub(City,Inst1,Inst2).
 
 % Queries
-cultural_figure_from_cultural_city(Person,City) =>
-$ans("Cultural figure from significant city:",Person,"from",City).
+
+%cultural_figure_from_cultural_city(Person,City) =>
+%$ans("Cultural figure from significant city:",Person,"from",City).
 
 artist_intellectual_pair(Artist,Intellectual,City) =>
 $ans("Artist and intellectual from same city:",Artist,"and",Intellectual,"from",City).
 
-politically_artistic_city(City,Politician,Artist) =>
-$ans("City with political and artistic heritage:",City,"with politician",Politician,"and artist",Artist).
+%politically_artistic_city(City,Politician,Artist) =>
+%$ans("City with political and artistic heritage:",City,"with politician",Politician,"and artist",Artist).
 
-cultural_hub(City,Person1,Person2) =>
-$ans("Cultural hub:",City,"home to cultural figures",Person1,"and",Person2).
+%cultural_hub(City,Person1,Person2) =>
+%$ans("Cultural hub:",City,"home to cultural figures",Person1,"and",Person2).
 
-academic_cultural_connection(City,Person) =>
-$ans("Academic city cultural connection:",City,"produced",Person).
+%academic_cultural_connection(City,Person) =>
+%$ans("Academic city cultural connection:",City,"produced",Person).
 
-educational_historical_figure(City,Person) =>
-$ans("Educational and historical city produced:",City,"notable figure",Person).
+%educational_historical_figure(City,Person) =>
+%$ans("Educational and historical city produced:",City,"notable figure",Person).
 
-cultural_institution_hub(City,Inst1,Inst2) =>
-$ans("Cultural institution hub:",City,"with",Inst1,"and",Inst2). 
+%cultural_institution_hub(City,Inst1,Inst2) =>
+%$ans("Cultural institution hub:",City,"with",Inst1,"and",Inst2). 

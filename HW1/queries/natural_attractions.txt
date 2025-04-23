@@ -1,42 +1,41 @@
-# Define natural attractions
+% Define natural attractions
 -triple(Place,"rdf:type","yago:National_Park") |
 -triple(Place,"rdf:type","yago:Natural_Monument") |
 -triple(Place,"rdf:type","yago:Cave_System") |
 -triple(Place,"rdf:type","yago:Botanical_Garden") =>
 natural_attraction(Place).
 
-# Get location and features
+% Get location and features
 -natural_attraction(Place) &
 -triple(Place,"schema:location",Location) &
 -triple(Place,"yago:hasNaturalFeature",Feature) =>
 nature_site(Place,Location,Feature).
 
-# Find activities available at natural sites
+% Find activities available at natural sites
 -natural_attraction(Place) &
 -triple(Place,"yago:hasActivity",Activity) =>
 outdoor_activity(Place,Activity).
 
-# Find large national parks (area > 50000)
+% Find large national parks (area > 50000)
 -triple(Place,"rdf:type","yago:National_Park") &
--triple(Place,"yago:area",Area) &
-Area > 50000 =>
+-triple(Place,"yago:area",Area) & Area > 50000 =>
 large_park(Place,Area).
 
-# Find places with multiple activities
+% Find places with multiple activities
 -outdoor_activity(Place,Activity1) &
 -outdoor_activity(Place,Activity2) &
 Activity1 != Activity2 =>
 activity_center(Place).
 
-# Output answers
-nature_site(X,Y,Z) =>
-$ans("Natural attraction:",X,"in",Y,"features",Z).
+% Output answers
+%nature_site(X,Y,Z) =>
+%$ans("Natural attraction:",X,"in",Y,"features",Z).
 
-outdoor_activity(X,Y) =>
-$ans("Activity available:",Y,"at",X).
+%outdoor_activity(X,Y) =>
+%$ans("Activity available:",Y,"at",X).
 
 large_park(X,Y) =>
 $ans("Large national park:",X,"with area",Y,"hectares").
 
-activity_center(X) =>
-$ans("Multiple activities available at:",X). 
+%activity_center(X) =>
+%$ans("Multiple activities available at:",X). 

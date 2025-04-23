@@ -53,7 +53,12 @@ This project implements a knowledge base for Estonian tourism using YAGO dataset
    Finds connections between cultural figures and academic cities. Example result:
 
    ```
-   "Academic city cultural connection: yago:Tartu produced yago:Sally_von_Kügelgen"
+   result: proof found
+   for data/estonia_tourism_knowledge_base.txt queries/cultural_relations.txt
+
+   answer: $ans("Artist and intellectual from same city:","yago:Andres_Koort","and","yago:Edgar_Kant","from","yago:Tallinn") | $ans("Artist and intellectual from same city:","yago:Helju_Rebane","and","yago:Andres_Koort","from","yago:Tallinn").
+   proof:
+   ...
    ```
 
 2. City Characteristics (queries/city_characteristics.txt):
@@ -62,10 +67,15 @@ This project implements a knowledge base for Estonian tourism using YAGO dataset
    ./gkcosx -mbsize 2000 data/estonia_tourism_knowledge_base.txt queries/city_characteristics.txt
    ```
 
-   Identifies major Estonian cities and their features. Example result:
+   Identifies city that is historically significant and has university:
 
    ```
-   "Major city in Estonia: yago:Tartu"
+   result: proof found
+   for data/estonia_tourism_knowledge_base.txt queries/city_characteristics.txt
+
+   answer: $ans("City with both university and historical significance:","yago:Tartu").
+   proof:
+   ...
    ```
 
 3. People and Places (queries/people_places.txt):

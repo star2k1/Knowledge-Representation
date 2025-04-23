@@ -5,7 +5,7 @@ triple(Person,"schema:birthPlace",City) &
 triple(City,"rdf:type",CityType) =>
 born_in_city_type(Person,City,CityType).
 
-% Rule to find artists (painters, musicians, etc.) from the same city
+% Rule to find painters from the same city
 triple(P1,"schema:birthPlace",City) &
 triple(P2,"schema:birthPlace",City) &
 triple(P1,"rdf:type","yago:Painter") &

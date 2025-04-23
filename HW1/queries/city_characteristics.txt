@@ -25,11 +25,11 @@ educational_center(City).
 educational_historical_city(City) =>
 $ans("City with both university and historical significance:",City).
 
-major_estonian_city(City) =>
-$ans("Major city in Estonia:",City).
+%major_estonian_city(City) =>
+%$ans("Major city in Estonia:",City).
 
-cultural_center(City) =>
-$ans("Cultural center in Estonia:",City).
+%cultural_center(City) =>
+%$ans("Cultural center in Estonia:",City).
 
-educational_center(City) =>
-$ans("Educational center in Estonia:",City). 
+%educational_center(City) =>
+%$ans("Educational center in Estonia:",City). 
