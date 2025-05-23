@@ -41,8 +41,8 @@ separator=" |$$| "
 
 sleepseconds=2
 
-#use_llm="claude"
 use_llm="claude"
+#use_llm="gpt"
 
 # =======specific llm configuration ===
 
@@ -55,7 +55,7 @@ seed=1234
 max_tokens=4000 #20000
 
 gptversion="gpt-4o-2024-05-13" # "o3-mini-2025-01-31"
-claudeversion="claude-opus-4-20250514"
+claudeversion="claude-sonnet-4-20250514"
 
 syspromptfile="nlpsimpleprompt.txt"
 

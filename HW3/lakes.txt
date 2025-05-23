@@ -1,0 +1,7 @@
+[["isa", "Ermistu https://et.wikipedia.org/wiki/Ermistu_j%C3%A4rv", "lake"], ["Area", "Ermistu https://et.wikipedia.org/wiki/Ermistu_j%C3%A4rv", 480], ["isa", "T\u00f5hela https://et.wikipedia.org/wiki/T%C3%B5hela_j%C3%A4rv", "lake"], ["Area", "T\u00f5hela https://et.wikipedia.org/wiki/T%C3%B5hela_j%C3%A4rv", 407.3], ["isa", "Lavassaare https://et.wikipedia.org/wiki/Lavassaare_j%C3%A4rv", "lake"], ["Area", "Lavassaare https://et.wikipedia.org/wiki/Lavassaare_j%C3%A4rv", 211], ["isa", "Kaisma https://et.wikipedia.org/wiki/Kaisma_j%C3%A4rv", "lake"], ["Area", "Kaisma https://et.wikipedia.org/wiki/Kaisma_j%C3%A4rv", 140.4], ["isa", "Vaistu Suurj\u00e4rv https://et.wikipedia.org/wiki/Vaistu_Suurj%C3%A4rv", "lake"], ["Area", "Vaistu Suurj\u00e4rv https://et.wikipedia.org/wiki/Vaistu_Suurj%C3%A4rv", 21.8], ["isa", "Nigula https://et.wikipedia.org/wiki/Nigula_j%C3%A4rv", "lake"], ["Area", "Nigula https://et.wikipedia.org/wiki/Nigula_j%C3%A4rv", 17.9], ["isa", "T\u00f5lla paisj\u00e4rv https://et.wikipedia.org/wiki/T%C3%B5lla_paisj%C3%A4rv", "lake"], ["Area", "T\u00f5lla paisj\u00e4rv https://et.wikipedia.org/wiki/T%C3%B5lla_paisj%C3%A4rv", 10],
+
+["forall", ["X","Y","X1","Y1"], [[["Area","X","X1"],"&",["Area","Y","Y1"],"&",["$greater","Y1","X1"]],"=>",["larger","X","Y"]]],
+
+["~larger","Nigula https://et.wikipedia.org/wiki/Nigula_j%C3%A4rv","T\u00f5hela https://et.wikipedia.org/wiki/T%C3%B5hela_j%C3%A4rv"]
+
+]

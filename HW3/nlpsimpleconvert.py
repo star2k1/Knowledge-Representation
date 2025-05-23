@@ -33,9 +33,8 @@ show_compact=True # if show_tests is False, set to True to get 0/1 char for each
 
 debug=False
 
-test_files=["nlpsimpletext_gpt_llmresults.txt"]
-converted_file_name="nlpsimpletext_gpt_llmresults_converted.txt"
-
+test_files=["nlpsimpletext_claude_llmresults.txt"]
+converted_file_name="nlpsimpletext_claude_llmresults_converted.txt"
 
 
 linestart="|!!|"

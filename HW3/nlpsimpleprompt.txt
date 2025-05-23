@@ -57,3 +57,16 @@ Rank	Town	Town rights	Population 2014[2]	Population 2018[3]	County (maakond)
 ["Town rights","Tallinn https://en.wikipedia.org/wiki/Tallinn",1248],
 ["Population","Tallinn https://en.wikipedia.org/wiki/Tallinn",430805],
 ["County","Tallinn https://en.wikipedia.org/wiki/Tallinn","Harju"]]
+
+For each known lake add a relevant wikipedia link as an identifier:
+"Biggest lakes in Pärnumaa:
+Lake Area(ha)
+Ermistu 	480" => [["isa", "Ermistu https://et.wikipedia.org/wiki/Ermistu_j%C3%A4rv", "lake"],
+["Area", "Ermistu https://et.wikipedia.org/wiki/Ermistu_j%C3%A4rv", 480]]
+
+For each island a relevant wikipedia link as an identifier:
+"Eesti suurimad saared (2015 seisuga):
+Saar 	Pindala (km²) 	Elanikke (aasta)
+Saaremaa 	2683,25 	31304 (2017)"
+=> [["isa", "Saaremaa https://et.wikipedia.org/wiki/Saaremaa", "island"],
+["Area", "Saaremaa https://et.wikipedia.org/wiki/Saaremaa", 2683,25], ["Population, "Saaremaa https://et.wikipedia.org/wiki/Saaremaa", 31304]]
