@@ -6,11 +6,7 @@
 
 ["forall", ["A", "B", "C", "A1", "B1", "C1"], [[["Area", "A", "A1"], "&", ["Area", "B", "B1"], "&", ["Area", "C", "C1"], "&", ["$greater", "A1", "C1"], "&", ["$greater", "B1", "C1"]], "=>", ["smallest", "C", "A", "B"]]],
 
-["forall", ["X", "Y", "X1", "Y1"], [[["Area", "X", "X1"], "&", ["Area", "Y", "Y1"], "&", ["$greater", "Y1", "X1"]], "=>", ["smaller", "X", "Y"]]],
-
-["~smaller","K\u00f5rksaar 13","Rammu saar 12"]
-["~smaller","K\u00f5rksaar 13","Rammu saar 12"]
-
+["~smallest", "Rammu saar 12", "Rammu saar 12", "K\u00f5rksaar 13"]
 
 
 ]
